@@ -1,0 +1,21 @@
+using {{ENTITIES_NAMESPACE}};
+
+namespace {{SERVICES_NAMESPACE}};
+
+public interface I{{PASCAL_TABLE_NAME}}Service
+{
+    IEnumerable<{{PASCAL_TABLE_NAME}}Model> Get{{PASCAL_TABLE_NAME_PLURAL}}();
+    Task<IEnumerable<{{PASCAL_TABLE_NAME}}Model>> Get{{PASCAL_TABLE_NAME_PLURAL}}Async();
+    
+    {{PASCAL_TABLE_NAME}}Model Get{{PASCAL_TABLE_NAME}}({{PRIMARY_KEY}});
+    Task<{{PASCAL_TABLE_NAME}}Model> Get{{PASCAL_TABLE_NAME}}Async({{PRIMARY_KEY}});
+    
+    void Create{{PASCAL_TABLE_NAME}}(Create{{PASCAL_TABLE_NAME}}Dto {{CAMEL_TABLE_NAME}});
+    Task Create{{PASCAL_TABLE_NAME}}Async(Create{{PASCAL_TABLE_NAME}}Dto {{CAMEL_TABLE_NAME}});
+
+    void Update{{PASCAL_TABLE_NAME}}(Update{{PASCAL_TABLE_NAME}}Dto {{CAMEL_TABLE_NAME}});
+    Task Update{{PASCAL_TABLE_NAME}}Async(Update{{PASCAL_TABLE_NAME}}Dto {{CAMEL_TABLE_NAME}});
+
+    void Delete{{PASCAL_TABLE_NAME}}({{PRIMARY_KEY}});
+    Task Delete{{PASCAL_TABLE_NAME}}Async({{PRIMARY_KEY}});
+}

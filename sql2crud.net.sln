@@ -1,0 +1,25 @@
+﻿
+Microsoft Visual Studio Solution File, Format Version 12.00
+# Visual Studio Version 17
+VisualStudioVersion = 17.8.34330.188
+MinimumVisualStudioVersion = 10.0.40219.1
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "sql2crud.net", "sql2crud.net.csproj", "{73996330-D59E-4DA9-8782-DEF1573061FC}"
+EndProject
+Global
+	GlobalSection(SolutionConfigurationPlatforms) = preSolution
+		Debug|Any CPU = Debug|Any CPU
+		Release|Any CPU = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(ProjectConfigurationPlatforms) = postSolution
+		{73996330-D59E-4DA9-8782-DEF1573061FC}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{73996330-D59E-4DA9-8782-DEF1573061FC}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{73996330-D59E-4DA9-8782-DEF1573061FC}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{73996330-D59E-4DA9-8782-DEF1573061FC}.Release|Any CPU.Build.0 = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(SolutionProperties) = preSolution
+		HideSolutionNode = FALSE
+	EndGlobalSection
+	GlobalSection(ExtensibilityGlobals) = postSolution
+		SolutionGuid = {65A1D606-D19A-4976-B276-1AB5C7A96301}
+	EndGlobalSection
+EndGlobal

@@ -1,0 +1,86 @@
+using Microsoft.AspNetCore.Authorization;
+using Microsoft.AspNetCore.Mvc;
+using {{SERVICES_NAMESPACE}};
+using {{DTO_NAMESPACE}};
+
+namespace {{CONTROLLERS_NAMESPACE}};
+
+[Route("{controller}/{action}/{id?}")]
+[Authorize]
+public class {{PASCAL_TABLE_NAME}}Controller : ControllerBase
+{
+    private readonly I{{PASCAL_TABLE_NAME}}Service {{CAMEL_TABLE_NAME}}Service;
+
+    public {{PASCAL_TABLE_NAME}}Controller(
+        I{{PASCAL_TABLE_NAME}}Service {{CAMEL_TABLE_NAME}}Service
+    )
+    {
+        this.{{CAMEL_TABLE_NAME}}Service = {{CAMEL_TABLE_NAME}}Service;
+    }
+
+    [HttpGet]
+    public IActionResult Get{{PASCAL_TABLE_NAME_PLURAL}}()
+    {
+        return Ok(this.{{CAMEL_TABLE_NAME}}Service.Get{{PASCAL_TABLE_NAME_PLURAL}}());
+    }
+
+    [HttpGet]
+    public async Task<IActionResult> Get{{PASCAL_TABLE_NAME_PLURAL}}Async()
+    {
+        return Ok(await this.{{CAMEL_TABLE_NAME}}Service.Get{{PASCAL_TABLE_NAME_PLURAL}}Async());
+    }
+    
+    [HttpGet]
+    public IActionResult Get{{PASCAL_TABLE_NAME}}({{PRIMARY_KEY_ROUTE}})
+    {
+        return Ok(this.{{CAMEL_TABLE_NAME}}Service.Get{{PASCAL_TABLE_NAME}}({{PRIMARY_KEY_NO_TYPES}}));
+    }
+
+    [HttpGet]
+    public async Task<IActionResult> Get{{PASCAL_TABLE_NAME}}Async({{PRIMARY_KEY_ROUTE}})
+    {
+        return Ok(await this.{{CAMEL_TABLE_NAME}}Service.Get{{PASCAL_TABLE_NAME}}Async({{PRIMARY_KEY_NO_TYPES}}));
+    }
+    
+    [HttpPost]
+    public IActionResult Create{{PASCAL_TABLE_NAME}}([FromBody] Create{{PASCAL_TABLE_NAME}}Dto create{{PASCAL_TABLE_NAME}})
+    {
+        this.{{CAMEL_TABLE_NAME}}Service.Create{{PASCAL_TABLE_NAME}}(create{{PASCAL_TABLE_NAME}});
+        return Ok();
+    }
+
+    [HttpPost]
+    public async Task<IActionResult> Create{{PASCAL_TABLE_NAME}}Async([FromBody] Create{{PASCAL_TABLE_NAME}}Dto create{{PASCAL_TABLE_NAME}})
+    {
+        await this.{{CAMEL_TABLE_NAME}}Service.Create{{PASCAL_TABLE_NAME}}Async(create{{PASCAL_TABLE_NAME}});
+        return Ok();
+    }
+    
+    [HttpPut]
+    public IActionResult Update{{PASCAL_TABLE_NAME}}([FromBody] Update{{PASCAL_TABLE_NAME}}Dto update{{PASCAL_TABLE_NAME}})
+    {
+        this.{{CAMEL_TABLE_NAME}}Service.Update{{PASCAL_TABLE_NAME}}(update{{PASCAL_TABLE_NAME}});
+        return Ok();
+    }
+
+    [HttpPut]
+    public async Task<IActionResult> Update{{PASCAL_TABLE_NAME}}Async([FromBody] Update{{PASCAL_TABLE_NAME}}Dto update{{PASCAL_TABLE_NAME}})
+    {
+        await this.{{CAMEL_TABLE_NAME}}Service.Update{{PASCAL_TABLE_NAME}}Async(update{{PASCAL_TABLE_NAME}});
+        return Ok();
+    }
+    
+    [HttpDelete]
+    public IActionResult Delete{{PASCAL_TABLE_NAME}}({{PRIMARY_KEY_ROUTE}})
+    {
+        this.{{CAMEL_TABLE_NAME}}Service.Delete{{PASCAL_TABLE_NAME}}({{PRIMARY_KEY_NO_TYPES}});
+        return Ok();
+    }
+
+    [HttpDelete]
+    public async Task<IActionResult> Delete{{PASCAL_TABLE_NAME}}Async({{PRIMARY_KEY_ROUTE}})
+    {
+        await this.{{CAMEL_TABLE_NAME}}Service.Delete{{PASCAL_TABLE_NAME}}Async({{PRIMARY_KEY_NO_TYPES}});
+        return Ok();
+    }
+}

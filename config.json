@@ -1,0 +1,18 @@
+{
+  "ConnectionString": "Data Source=localhost; Initial Catalog=Alo; User Id=sa; Password=Parola123; TrustServerCertificate=True;",
+  "SearchEntities": [
+    "User",
+    "Company",
+    "MobileDevice",
+    "PaymentDeliveryReceipt"
+  ],
+  "SqlScriptsDirPath": "/home/vb/RiderProjects/test/Test.Clasic.Api/CreateTableScripts",
+  "EntitiesDirPath": "/home/vb/RiderProjects/test/Test.Clasic.Api/Entities",
+  "DTOsDirPath": "/home/vb/RiderProjects/test/Test.Clasic.Api/Services/DTOs",
+  "ServicesDirPath": "/home/vb/RiderProjects/test/Test.Clasic.Api/Services",
+  "ControllersDirPath": "/home/vb/RiderProjects/test/Test.Clasic.Api/Controllers",
+  "EntitiesNamespace": "Fleet1.Mobile.Repository.Models",
+  "DTOsNamespace": "Fleet1.Mobile.Service",
+  "ServicesNamespace": "Fleet1.Mobile.Service",
+  "ControllersNamespace": "Fleet1.Mobile.Api.Controllers"
+}

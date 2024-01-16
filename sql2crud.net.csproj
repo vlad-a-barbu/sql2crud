@@ -1,0 +1,30 @@
+﻿<Project Sdk="Microsoft.NET.Sdk">
+
+  <PropertyGroup>
+    <OutputType>Exe</OutputType>
+    <TargetFramework>net8.0</TargetFramework>
+    <ImplicitUsings>enable</ImplicitUsings>
+    <Nullable>enable</Nullable>
+  </PropertyGroup>
+
+  <ItemGroup>
+    <None Remove="Templates\ControllerTemplate.txt" />
+    <None Remove="Templates\ServiceTemplate.txt" />
+    <None Remove="generated-stuff\**" />
+  </ItemGroup>
+
+  <ItemGroup>
+    <EmbeddedResource Include="Templates\ServiceTemplate.txt" />
+    <EmbeddedResource Include="Templates\ControllerTemplate.txt" />
+    <EmbeddedResource Remove="generated-stuff\**" />
+  </ItemGroup>
+
+  <ItemGroup>
+    <PackageReference Include="Microsoft.Data.SqlClient" Version="5.1.4" />
+  </ItemGroup>
+
+  <ItemGroup>
+    <Compile Remove="generated-stuff\**" />
+  </ItemGroup>
+
+</Project>
