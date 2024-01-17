@@ -19,7 +19,7 @@ class Reader(string connectionString)
         {
             var schema = row["TABLE_SCHEMA"].ToString()!;
             var tableName = row["TABLE_NAME"].ToString()!;
-            if (!searchEntities.Any(x => string.Compare(x, tableName, ignoreCase: true) == 0))
+            if (searchEntities.Count > 0 && !searchEntities.Any(x => string.Compare(x, tableName, ignoreCase: true) == 0))
                 continue;
 
             var columns = new List<Column>();

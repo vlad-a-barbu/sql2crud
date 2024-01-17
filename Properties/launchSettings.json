@@ -1,0 +1,8 @@
+{
+  "profiles": {
+    "sql2crud.net": {
+      "commandName": "Project",
+      "commandLineArgs": "\"C:\\Users\\vlad.barbu\\source\\repos\\sql2crud.net\\config.json\""
+    }
+  }
+}

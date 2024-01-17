@@ -17,9 +17,3 @@ enum ConstraintType
     NOT_NULL,
     UNIQUE
 }
-
-enum Placeholder
-{
-    Namespace,
-
-}

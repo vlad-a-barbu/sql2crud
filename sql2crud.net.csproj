@@ -8,14 +8,16 @@
   </PropertyGroup>
 
   <ItemGroup>
-    <None Remove="Templates\ControllerTemplate.txt" />
+    <None Remove="Templates\ControllerTemplate_async.txt" />
+    <None Remove="Templates\ControllerTemplate_sync_async.txt" />
     <None Remove="Templates\ServiceTemplate.txt" />
     <None Remove="generated-stuff\**" />
   </ItemGroup>
 
   <ItemGroup>
+    <EmbeddedResource Include="Templates\ControllerTemplate_sync_async.txt" />
     <EmbeddedResource Include="Templates\ServiceTemplate.txt" />
-    <EmbeddedResource Include="Templates\ControllerTemplate.txt" />
+    <EmbeddedResource Include="Templates\ControllerTemplate_async.txt" />
     <EmbeddedResource Remove="generated-stuff\**" />
   </ItemGroup>
 

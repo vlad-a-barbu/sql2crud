@@ -106,7 +106,7 @@ public record Update{table.Name}Dto
         }
     }
 
-    private const string ControllerTemplateResource = "sql2crud.net.Templates.ControllerTemplate.txt";
+    private const string ControllerTemplateResource = "sql2crud.net.Templates.ControllerTemplate_async.txt";
     private const string ServiceTemplateResource = "sql2crud.net.Templates.ServiceTemplate.txt";
 
     private static string GetTemplate(string resourceName)
